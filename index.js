@@ -24,11 +24,12 @@ app.post("/course/purchase",function(req,res){
 
     })
 })
-app.get("/courses",function(req,res){
+app.get("/courses/preview",function(req,res){
     res.json({
         message:"List of availble courses"
     })
 })
+
 
 
 
