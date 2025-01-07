@@ -1,0 +1,25 @@
+{
+  "name": "week8app",
+  "version": "1.0.0",
+  "description": "This is Week 8, Course Selling App.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manava10/Week-8-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manava10/Week-8-Project/issues"
+  },
+  "homepage": "https://github.com/manava10/Week-8-Project#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.3"
+  }
+}
