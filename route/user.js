@@ -1,23 +1,28 @@
 //For routing all the endpoint starting with user
+const express = require("express");
+const Router = express.Router;
+// const {Router} = require("express")
 
-function createUserRoutes(app){
-    app.post("/user/signup",function(req,res){
-        res.json({
-            message:"ignUp EndPoint"
-        })
+const userRouter = Router();
+//Router in not a class but instead a function , provided by express Library
+
+
+userRouter.post("/signup",function(req,res){
+    res.json({
+        message:"SignUp EndPoint"
     })
-    app.post("/user/signin",function(req,res){
-        res.json({
-            message:"Sign in Endpoint"
-        })
+})
+userRouter.post("/signin",function(req,res){
+    res.json({
+        message:"Sign in Endpoint"
     })
-    app.get("/user/purchase",function(req,res){
-        res.json({
-            message: "These are the course purchased by you"
-    
-        })
+})
+userRouter.get("/purchase",function(req,res){
+    res.json({
+        message: "These are the course purchased by you"
+
     })
-}
+})
 module.exports = {
-    createUserRoutes:createUserRoutes
+    userRouter:userRouter
 }
