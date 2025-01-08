@@ -1,4 +1,5 @@
 const express = require("express");
+const {mongoose} = require("mongoose");
 
 const{userRouter} = require("./route/user");
 const{courseRouter} = require("./route/course");
@@ -10,6 +11,11 @@ app.use("/user",userRouter);
 app.use("/course",courseRouter)
 app.use("/admin",adminRouter);
 
-app.listen(4000,()=>{
-    console.log("Server is running on the PORT 4000")
-});
+async function main(){
+    await mongoose.connect("mongodb+srv://mmanav10:Ramayan123@cluster0.nordt.mongodb.net/week8app")
+    app.listen(3000,()=>{
+        console.log("The server has started on port 3000")
+    });
+}
+
+main()

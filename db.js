@@ -1,13 +1,4 @@
-console.log("Database file is being executed")
-const mongoose = require("mongoose");
-mongoose
-  .connect("mongodb+srv://mmanav10:Ramayan123@cluster0.nordt.mongodb.net/week8app", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("Connected to MongoDB successfully!"))
-  .catch((error) => console.error("Error connecting to MongoDB:", error.message));
-
+const {mongoose} = require("mongoose");
 const {Schema} = mongoose;
 const {ObjectId} = mongoose;
 //const Schema = mongoose.Schema
