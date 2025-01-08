@@ -1,9 +1,6 @@
 //For routing all the endpoint starting with user
 const express = require("express");
-const Router = express.Router;
-// const {Router} = require("express")
-
-const userRouter = Router();
+const userRouter = express.Router();
 //Router in not a class but instead a function , provided by express Library
 
 

@@ -10,6 +10,6 @@ app.use("/user",userRouter);
 app.use("/course",courseRouter)
 app.use("/admin",adminRouter);
 
-app.listen(3000,()=>{
-    console.log("Server is running on the PORT 3000")
+app.listen(4000,()=>{
+    console.log("Server is running on the PORT 4000")
 });

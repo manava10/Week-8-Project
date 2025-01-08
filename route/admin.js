@@ -1,7 +1,8 @@
 const express = require("express")
-const Router = express.Router;
 
-const adminRouter = Router();
+const adminRouter = express.Router();
+
+const {adminModel} = require("../db");
 
 adminRouter.post("/signup",(req,res)=>{
     res.json({
@@ -14,7 +15,6 @@ adminRouter.post("/login",(req,res)=>{
         message:"Admin login Router"
     })
 })
-
 
 //Admin can create a course . To create a course admin must be signed in before
 
