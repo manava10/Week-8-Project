@@ -7,14 +7,14 @@ const Router = express.Router;
 
 const courseRouter = Router();
 
-courseRouter.post("/course/purchase",function(req,res){
+courseRouter.post("/purchase",function(req,res){
     res.json({
         message : "You are going to purchase from these"
 
 
     })
 })
-courseRouter.get("/courses/preview",function(req,res){
+courseRouter.get("/preview",function(req,res){
     res.json({
         message:"List of available courses"
     })
