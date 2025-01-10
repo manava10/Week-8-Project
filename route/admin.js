@@ -4,7 +4,20 @@ const adminRouter = express.Router();
 
 const {adminModel} = require("../db");
 
-adminRouter.post("/signup",(req,res)=>{
+adminRouter.post("/signup",async(req,res)=>{
+    const {email ,password ,firstName , lastName  } = req.body;//add zod validation 
+    // and have to add bcrypt
+
+    //Have to put inside a try catch block 
+    await adminModel.create({
+        email:email,
+        password : password,
+        firstName : firstName,
+        lastName : lastName
+    })
+    res.json({
+        message:"SignUp SuccessFull"
+    }) 
     res.json({
         message:"Admin signUp Route"
     })
