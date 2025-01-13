@@ -4,6 +4,8 @@ const express = require("express");
 
 const courseRouter = express.Router();
 
+cost {courseModel} = require("../db")
+
 courseRouter.post("/purchase",function(req,res){
     res.json({
         message : "You are going to purchase from these"
